@@ -1,7 +1,7 @@
 define([''], function () {
 
     return {
-        id: 'defaultskin',
-        name: 'Default Skin'
+        id: 'emby.skin.dark.theme.RED',
+        name: 'Dark Theme - RED'
     };
 });
