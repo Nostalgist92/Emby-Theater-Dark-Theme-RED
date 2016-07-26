@@ -164,23 +164,23 @@ select[is="emby-select"], input[is="emby-input"] {
     }
 
 .defaultCardColor1 {
-    background-color: #009688;
+    background-color: #4B0A0F;
 }
 
 .defaultCardColor2 {
-    background-color: #D32F2F;
+    background-color: #94131E;
 }
 
 .defaultCardColor3 {
-    background-color: #0288D1;
+    background-color: #E81123;
 }
 
 .defaultCardColor4 {
-    background-color: #388E3C;
+    background-color: #F25561;
 }
 
 .defaultCardColor5 {
-    background-color: #F57F17;
+    background-color: #F9B3B8;
 }
 
 .selectedItemSecondaryInfo {
