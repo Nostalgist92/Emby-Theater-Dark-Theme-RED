@@ -176,11 +176,11 @@ select[is="emby-select"], input[is="emby-input"] {
 }
 
 .defaultCardColor4 {
-    background-color: #F25561;
+    background-color: #404040;
 }
 
 .defaultCardColor5 {
-    background-color: #F9B3B8;
+    background-color: #080808;
 }
 
 .selectedItemSecondaryInfo {
