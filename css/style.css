@@ -12,6 +12,8 @@ a {
     background-size: contain;
     width: 6.9vw;
     height: 3.7vh;
+    min-height: 40px;
+    min-width: 74px;
     vertical-align: middle;
     display: inline-block;
 }
@@ -32,7 +34,7 @@ a {
 }
 
 .headerAudioPlayerButton {
-    color: #E81123;
+    color: #52B54B;
 }
 
 .headerBackButton {
@@ -58,18 +60,6 @@ a {
     border-radius: 1000px;
 }
 
-.skinContainer {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    /* Undo style applied by the core */
-    height: auto;
-}
-
 .skinHeader {
     /* This will ensure it is on top of the main body */
     z-index: 1;
@@ -84,30 +74,18 @@ a {
     height: 11vh;
 }
 
-.skinBody {
-    height: 100%;
-}
-
 .headerLeft {
-    margin-right: auto;
     margin-left: 2.3%;
     display: flex;
     align-items: center;
 }
 
 .headerRight {
-    margin-left: auto;
     margin-right: 2.3%;
     display: flex;
     align-items: center;
-}
-
-@media all and (max-height: 800px) {
-
-    /* Prevent the heaer buttons from overlapping with the control box */
-    .headerRight {
-        margin-top: 1.2em;
-    }
+    flex-grow: 1;
+    justify-content: flex-end;
 }
 
 .headerClock {
@@ -117,45 +95,56 @@ a {
     margin-left: 1em;
 }
 
-.externalPageContainer {
-    padding-top: 0;
-    position: absolute;
-    top: 11vh;
-    left: 0;
-    right: 0;
-    bottom: 0;
+@media all and (max-width: 720px) {
+
+    .headerClock {
+        display: none !important;
+    }
 }
 
-.pageContainer {
+.layout-mobile .headerClock {
+    display: none !important;
+}
+
+.pageContainer, .externalPageContainer {
     padding-top: 11vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     overflow: hidden;
-    display: -ms-flex;
-    display: -webkit-flex;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    contain: strict;
+    contain: layout style;
 }
 
-.centeredPageContent {
-    width: 60%;
-    margin: 5vh auto auto;
+    .pageContainer.flex {
+        padding-top: 11vh;
+        overflow: hidden;
+        display: -ms-flex;
+        display: -webkit-flex;
+        display: flex;
+        contain: strict;
+    }
+
+    .pageContainer.vertical.fullWidth {
+        display: block;
+        width: 94.5%;
+        margin: auto;
+    }
+
+    .pageContainer.vertical.centered {
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+    }
+
+@media all and (min-width: 1280px) {
+
+    .pageContainer.vertical.centered {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
 }
 
 .itemScrollFrame.scrollFrameX .scrollSlider {
     padding-left: 4.5%;
-}
-
-.userViewNames {
-    /* Somehow this resolves the issue of the content getting distorted 
-        https://github.com/MediaBrowser/Emby.Theater.Windows/issues/270
-    */
-    /*overflow: hidden;*/
 }
 
 .userViewNames {
@@ -175,17 +164,6 @@ a {
         padding-top: 2.74vh;
     }
 
-.tabbedPageContainer {
-    align-items: initial;
-    justify-content: initial;
-}
-
-.verticalPageContainer {
-    display: block;
-    width: 97%;
-    margin: auto;
-}
-
 .itemScrollFrame.scrollFrameY {
     height: 100%;
     /* Needed for native scroll */
@@ -198,7 +176,7 @@ a {
     flex-grow: 1;
 }
 
-.centeredPageContent h1, .horizontalPageContent h1 {
+.horizontalPageContent h1 {
     margin-top: 0;
 }
 
@@ -213,21 +191,6 @@ a {
 .scrollFrameX .scrollSlider {
     white-space: nowrap !important;
 }
-
-.scrollX {
-    overflow-y: hidden;
-    overflow-x: scroll;
-    -webkit-overflow-scrolling: touch;
-    white-space: nowrap;
-    -ms-overflow-style: none;
-    overflow: -moz-scrollbars-none;
-    position: relative;
-}
-
-    .scrollX::-webkit-scrollbar {
-        height: 0 !important;
-        display: none;
-    }
 
 ::-webkit-scrollbar {
     width: 1vh;
@@ -257,7 +220,7 @@ a {
         display: block !important;
     }
 
-.userViewNames h2 {
+.userViewNames h3 {
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -268,11 +231,6 @@ a {
     margin-top: 0;
     padding-top: 0;
     padding-bottom: .2em;
-    font-size: 106%;
-}
-
-.userViewButtonText {
-    font-size: 110%;
 }
 
 .listNumbers {
@@ -442,9 +400,36 @@ i.mediaInfoItem {
 }
 
 .loginSquareCard {
-    width: 18vw;
+    width: 54vw;
     flex-shrink: 0;
     display: inline-block !important;
+}
+
+@media (orientation: landscape) {
+    .loginSquareCard {
+        width: 40vh;
+    }
+}
+
+@media (orientation: landscape) and (max-height: 600px) {
+
+    .loginSquareCard {
+        width: 50vh;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 800px) {
+
+    .loginSquareCard {
+        width: 26vw;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1280px) {
+
+    .loginSquareCard {
+        width: 18vw;
+    }
 }
 
 .itemProgressBar {
@@ -464,7 +449,7 @@ i.mediaInfoItem {
 }
 
 .repeatActive {
-    color: #E81123;
+    color: #52B54B;
 }
 
 .listItemsMoreButtonContainer {
@@ -538,16 +523,6 @@ button.mini {
 .horizontalItemsContainer {
     display: flex;
 }
-
-/*[is="emby-button"] {
-    transition: all 300ms ease-out;
-}
-
-[is="emby-button"]:focus {
-    transform: scale(1.2, 1.2);
-    z-index: 99999999;
-    position: relative;
-}*/
 
 i.mediumSizeIcon {
     height: 3.7vh !important;
