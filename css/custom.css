@@ -19,12 +19,12 @@ a:focus {background: #E81123 !important;}
 
 .userViewNames button:focus .userViewButtonText {border-bottom-color: #E81123 !important;}
 
-.defaultCardColor1 {background-color: #4B0A0F;}
+.defaultCardColor1 {background-color: #4B0A0F !important;}
   
-.defaultCardColor2 {background-color: #94131E;}
+.defaultCardColor2 {background-color: #94131E !important;}
   
-.defaultCardColor3 {background-color: #E81123;}
+.defaultCardColor3 {background-color: #E81123 !important;}
   
-.defaultCardColor4 {background-color: #404040;}
+.defaultCardColor4 {background-color: #404040 !important;}
   
-.defaultCardColor5 {background-color: #080808;}
+.defaultCardColor5 {background-color: #080808 !important;}
