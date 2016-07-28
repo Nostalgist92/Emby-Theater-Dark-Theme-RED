@@ -1,0 +1,20 @@
+a {color: #E81123 !important;}
+
+a:focus {background: #E81123 !important;}
+
+.mdl-textfield--floating-label.is-focused .mdl-textfield__label, .mdl-textfield--floating-label.is-dirty .mdl-textfield__label, 
+.mdl-textfield--floating-label.has-placeholder .mdl-textfield__label {color: #E81123 !important;}
+
+[is="emby-button"]:focus:not(.btnUserViewHeader) {background: #E81123 !important;}
+
+.card[focused]:not(.round) .cardBox, .card:focus:not(.round) .cardBox {border-color: #E81123 !important;}
+
+.card[data-cardtype='embyconnect'] .cardImageContainer {background-color: #E81123 !important;}
+
+.userViewNames button:focus {color: #E81123 !important;}
+
+.userViewNames button:focus .userViewButtonText {border-bottom-color: #E81123 !important;}
+
+.userViewNames button:focus {color: #E81123 !important;}
+
+.userViewNames button:focus .userViewButtonText {border-bottom-color: #E81123 !important;}
