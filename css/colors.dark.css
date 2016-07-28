@@ -3,15 +3,14 @@ html {
 }
 
 a {
-    color: #E81123;
+    color: #52B54B;
     outline: none !important;
     display: inline-block;
     transition: all .15s ease-out;
-    transform: scale(1);
 }
 
     a:focus {
-        background: #E81123;
+        background: #52B54B;
         color: #fff;
         transform: scale(1.16);
         padding-left: .3em;
@@ -23,11 +22,11 @@ a {
         text-decoration: underline;
     }
 
-.skinContainer {
+.backgroundContainer {
     background: #121212;
 }
 
-    .skinContainer.withBackdrop {
+    .backgroundContainer.withBackdrop {
         background: linear-gradient(rgba(6, 6, 6, .9), rgba(6, 6, 6, .6), rgba(6, 6, 6, .9));
     }
 
@@ -64,7 +63,7 @@ select[is="emby-select"], input[is="emby-input"] {
 }
 
 .mdl-textfield--floating-label.is-focused .mdl-textfield__label, .mdl-textfield--floating-label.is-dirty .mdl-textfield__label, .mdl-textfield--floating-label.has-placeholder .mdl-textfield__label {
-    color: #E81123 !important;
+    color: #52B54B !important;
 }
 
 .checkboxOutline {
@@ -76,7 +75,7 @@ select[is="emby-select"], input[is="emby-input"] {
 }
 
 [is="emby-button"]:focus:not(.btnUserViewHeader) {
-    background: #E81123;
+    background: #52B54B;
     color: #fff;
 }
 
@@ -85,12 +84,12 @@ select[is="emby-select"], input[is="emby-input"] {
 }
 
 .card[focused]:not(.round) .cardBox, .card:focus:not(.round) .cardBox {
-    border-color: #E81123;
+    border-color: #52B54B;
     /*border-color: rgba(0, 0, 0, .6);*/
 }
 
 .card[data-cardtype='embyconnect'] .cardImageContainer {
-    background-color: #E81123;
+    background-color: #52B54B;
 }
 
 .headerBackButton {
@@ -146,41 +145,41 @@ select[is="emby-select"], input[is="emby-input"] {
 }
 
 .userViewNames button:focus {
-    color: #E81123 !important;
+    color: #52B54B !important;
     opacity: 1;
 }
 
     .userViewNames button:focus .userViewButtonText {
-        border-bottom-color: #E81123;
+        border-bottom-color: #52B54B;
     }
 
 .userViewNames button:focus {
-    color: #E81123 !important;
+    color: #52B54B !important;
     opacity: 1;
 }
 
     .userViewNames button:focus .userViewButtonText {
-        border-bottom-color: #E81123;
+        border-bottom-color: #52B54B;
     }
 
 .defaultCardColor1 {
-    background-color: #4B0A0F;
+    background-color: #009688;
 }
 
 .defaultCardColor2 {
-    background-color: #94131E;
+    background-color: #D32F2F;
 }
 
 .defaultCardColor3 {
-    background-color: #E81123;
+    background-color: #0288D1;
 }
 
 .defaultCardColor4 {
-    background-color: #404040;
+    background-color: #388E3C;
 }
 
 .defaultCardColor5 {
-    background-color: #080808;
+    background-color: #F57F17;
 }
 
 .selectedItemSecondaryInfo {
